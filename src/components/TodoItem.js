@@ -23,9 +23,9 @@ const TodoItem = props => {
 const styles = StyleSheet.create({
   list: {
     backgroundColor: '#FFF',
-    borderRadius: 50,
-    marginHorizontal: 15,
-    marginTop: 15
+    borderRadius: 5,
+    marginHorizontal: 10,
+    marginTop: 5
   },
   checked: {
     textDecorationLine: 'line-through'
