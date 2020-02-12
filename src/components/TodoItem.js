@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { List, Checkbox } from 'react-native-paper';
+import { List, Checkbox, IconButton } from 'react-native-paper';
 
-const TodoItem = props => {
+const TodoItem = ({ onItemDelete, todo }) => {
   const [checked, setChecked] = useState(false);
   return (
     <List.Item
       style={styles.list}
       titleStyle={checked ? styles.checked : null}
-      title={props.todo}
+      title={todo.title}
       left={() => (
         <Checkbox
           status={checked ? 'checked' : 'unchecked'}
           onPress={() => setChecked(!checked)}
         />
       )}
-      right={props => <List.Icon {...props} icon="delete" />}
+      right={props => (
+        <IconButton
+          icon="delete"
+          size={18}
+          onPress={() => onItemDelete(todo.id)}
+        />
+      )}
     />
   );
 };

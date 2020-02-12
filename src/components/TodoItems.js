@@ -6,8 +6,9 @@ const TodoItems = props => {
   return (
     <FlatList
       data={props.todoList}
-      keyExtractor={item => item}
-      renderItem={({ item }) => <TodoItem todo={item} />}
+      renderItem={({ item }) => (
+        <TodoItem todo={item} onItemDelete={props.onItemDelete} />
+      )}
     />
   );
 };

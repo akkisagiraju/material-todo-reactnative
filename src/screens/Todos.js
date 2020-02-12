@@ -4,18 +4,25 @@ import { FAB } from 'react-native-paper';
 import Header from '../components/Header';
 import globalStyles from '../styles/globalStyles';
 import TodoItems from '../components/TodoItems';
+import { uuid } from 'uuidv4';
 
 const Todos = () => {
   const [todoList, setTodoList] = useState([
-    'Eat',
-    'code like a maniac',
-    'sleep until you cannot'
+    { id: uuid(), title: 'Eat' },
+    { id: uuid(), title: 'code like a maniac' },
+    { id: uuid(), title: 'sleep until you cannot' }
   ]);
+
+  const onItemDelete = id => {
+    const tempList = todoList.filter(todo => todo.id !== id);
+    setTodoList(tempList);
+  };
+
   return (
     <>
       <Header title="Add Todos" />
       <View style={styles.container}>
-        <TodoItems todoList={todoList} />
+        <TodoItems todoList={todoList} onItemDelete={onItemDelete} />
         <FAB style={styles.fab} icon="plus" label="Add Todo" />
       </View>
     </>
