@@ -22,7 +22,8 @@
     "react-native-paper": "^3.6.0",
     "react-native-safe-area-context": "^0.7.2",
     "react-native-screens": "^2.0.0-beta.2",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "uuidv4": "^6.0.2"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.0.0",
