@@ -4,7 +4,8 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,
-  KeyboardAvoidingView
+  KeyboardAvoidingView,
+  Alert
 } from 'react-native';
 import { FAB, TextInput, Snackbar } from 'react-native-paper';
 import Header from '../components/Header';
@@ -39,11 +40,15 @@ const Todos = () => {
   };
 
   const onItemAdd = () => {
-    let tempList = [...todoList];
-    tempList.push({ id: uuid(), title: todo });
-    setTodoList(tempList);
-    setAddingTodo(false);
-    setTodo('');
+    if (todo.length !== 0) {
+      let tempList = [...todoList];
+      tempList.push({ id: uuid(), title: todo });
+      setTodoList(tempList);
+      setAddingTodo(false);
+      setTodo('');
+    } else {
+      Alert.alert('Empty todo', 'Type something, wanker.')
+    }
   };
 
   return (
