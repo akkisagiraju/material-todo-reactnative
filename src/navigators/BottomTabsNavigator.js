@@ -1,6 +1,6 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import ProfileScreen from '../screens/Profile';
+import SettingsScreen from '../screens/Settings';
 import TodoScreen from '../screens/Todos';
 
 const MaterialTab = createMaterialBottomTabNavigator();
@@ -22,10 +22,10 @@ const BottomTabsNavigator = () => {
         }}
       />
       <MaterialTab.Screen
-        name="Profile"
-        component={ProfileScreen}
+        name="Settings"
+        component={SettingsScreen}
         options={{
-          tabBarIcon: 'face'
+          tabBarIcon: 'settings'
         }}
       />
     </MaterialTab.Navigator>

@@ -7,7 +7,7 @@ const Settings = () => {
   return (
     <View>
       <Header title="Profile" />
-      <Title>This is profile screen.</Title>
+      <Title>This is settings screen.</Title>
     </View>
   );
 };
