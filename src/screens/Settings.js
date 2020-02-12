@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { Title } from 'react-native-paper';
 import Header from '../components/Header';
 
-const Profile = () => {
+const Settings = () => {
   return (
     <View>
       <Header title="Profile" />
@@ -12,4 +12,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Settings;
