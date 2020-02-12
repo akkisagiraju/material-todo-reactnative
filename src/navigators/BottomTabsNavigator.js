@@ -18,7 +18,7 @@ const BottomTabsNavigator = () => {
         name="Todos"
         component={TodoScreen}
         options={{
-          tabBarIcon: 'note-plus'
+          tabBarIcon: 'note-text'
         }}
       />
       <MaterialTab.Screen
